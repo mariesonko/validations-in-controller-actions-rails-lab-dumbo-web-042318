@@ -5,6 +5,10 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def new
+    @post = Post.new
+  end
+
   def show
   end
 
@@ -17,7 +21,7 @@ class PostsController < ApplicationController
     redirect_to @post
   else
     render "edit"
-  end 
+  end
   end
 
   private
